@@ -43,9 +43,12 @@ def dna_prob1(sequence):
     #initializes new dictionary
     probablity_dict = {}
 
+    #total of values
+    total = sum(counter.values())
+
     #loops through the key values in counter and adds them to the probability_dict
     for key, value in counter.items():
-        probablity_dict[key] = value / sum(counter.values())
+        probablity_dict[key] = value / total
 
     #returns probability dict
     return probablity_dict
@@ -71,16 +74,16 @@ def dna_bp(sequence):
     #reverse the order of A / T and G / C
     for char in sequence:
         if char == 'A':
-            T = char.replace('A', 'T')
+            T = 'T'
             new_seq.append(T)
         elif char == 'T':
-            A = char.replace('T','A')
+            A = 'A'
             new_seq.append(A)
         elif char == 'G':
-            C = char.replace('G', 'C')
+            C = 'C'
             new_seq.append(C)
         elif char == 'C':
-            G = char.replace('C', 'G')
+            G = 'G'
             new_seq.append(G)
 
     #changes the list into a string
@@ -92,28 +95,14 @@ assert(dna_bp('ATCGATTGAGCTCTAGCG') == 'TAGCTAACTCGAGATCGC')
 print("Function 3: Asserts Completed Successfully")
 
 
+# #Bonus Function: 
 
-#Function 4: 
-
-def dna_prob2(sequence):
-
-
-
-
-#Validate
-tbl = dna_prob2('ATCGATTGAGCTCTAGCG')
-assert(tbl['T']['T'] == 0.2)
-assert(tbl['G']['A'] == 0.5)
-assert(tbl['C']['G'] == 0.5)
-print("Asserts Completed Successfully")
-
-
-
-
-
-
-
-
+# #Validate
+# tbl = dna_prob2('ATCGATTGAGCTCTAGCG')
+# assert(tbl['T']['T'] == 0.2)
+# assert(tbl['G']['A'] == 0.5)
+# assert(tbl['C']['G'] == 0.5)
+# print("Asserts Completed Successfully")
 
 
 
