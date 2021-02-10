@@ -95,14 +95,17 @@ assert(dna_bp('ATCGATTGAGCTCTAGCG') == 'TAGCTAACTCGAGATCGC')
 print("Function 3: Asserts Completed Successfully")
 
 
-# #Bonus Function: 
+#Bonus Function: 
+def dna_prob2(sequence):
+
+
 
 # #Validate
 # tbl = dna_prob2('ATCGATTGAGCTCTAGCG')
 # assert(tbl['T']['T'] == 0.2)
 # assert(tbl['G']['A'] == 0.5)
 # assert(tbl['C']['G'] == 0.5)
-# print("Asserts Completed Successfully")
+# print("Bonus: Asserts Completed Successfully")
 
 
 
